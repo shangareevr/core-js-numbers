@@ -34,7 +34,11 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCircleCircumference(radius) {
+<<<<<<< HEAD
   return Math.PI * radius * 2;
+=======
+  return 2 * radius * Math.PI;
+>>>>>>> f65b8b69e766e8a52e6ebdb067ff8ac06cd12f8e
 }
 
 /**
@@ -49,7 +53,10 @@ function getCircleCircumference(radius) {
  *  10, 0  => 5
  *  -3, 3  => 0
  */
+<<<<<<< HEAD
 
+=======
+>>>>>>> f65b8b69e766e8a52e6ebdb067ff8ac06cd12f8e
 function getAverage(value1, value2) {
   return value1 / 2 + value2 / 2;
 }
@@ -61,7 +68,6 @@ function getAverage(value1, value2) {
  * @param {number} y1
  * @param {number} x2
  * @param {number} y2
- *
  * @return {number}
  *
  * @example:
@@ -70,7 +76,11 @@ function getAverage(value1, value2) {
  *   (-5,0) (10,-10) => 18.027756377319946
  */
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
+<<<<<<< HEAD
   return Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);
+=======
+  return ((x1 - x2) ** 2 + (y2 - y1) ** 2) ** 0.5;
+>>>>>>> f65b8b69e766e8a52e6ebdb067ff8ac06cd12f8e
 }
 
 /**
@@ -105,17 +115,21 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (0,-1)    => π
  *   (0,-1) (1,0)    => π/2
  *   (0,1) (0,1)     => 0
- *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
+<<<<<<< HEAD
   const deg = x1 * x2 + y1 * y2;
   const res =
     deg / (Math.sqrt(x1 ** 2 + y1 ** 2) * Math.sqrt(x2 ** 2 + y2 ** 2));
   return Math.acos(res);
+=======
+  return Math.abs(Math.atan2(x1 * y2 - y1 * x2, x1 * x2 + y1 * y2));
+>>>>>>> f65b8b69e766e8a52e6ebdb067ff8ac06cd12f8e
 }
 
 /**
  * Returns a last digit of a integer number.
+ * The input parameter will always be greater than or equal to zero and will be in decimal notation.
  *
  * @param {number} value
  * @return {number}
@@ -142,7 +156,11 @@ function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(value) {
+<<<<<<< HEAD
   return Number(value);
+=======
+  return +value;
+>>>>>>> f65b8b69e766e8a52e6ebdb067ff8ac06cd12f8e
 }
 
 /**
@@ -159,7 +177,11 @@ function parseNumberFromString(value) {
  *   1,2,3   => 3.741657386773941
  */
 function getParallelepipedDiagonal(a, b, c) {
+<<<<<<< HEAD
   return Math.sqrt(a ** 2 + b ** 2 + c ** 2);
+=======
+  return (a ** 2 + b ** 2 + c ** 2) ** 0.5;
+>>>>>>> f65b8b69e766e8a52e6ebdb067ff8ac06cd12f8e
 }
 
 /**
@@ -180,7 +202,12 @@ function getParallelepipedDiagonal(a, b, c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
+<<<<<<< HEAD
   return Math.round(num / 10 ** pow) * 10 ** pow;
+=======
+  const grade = 10 ** pow;
+  return Math.round(num / grade) * grade;
+>>>>>>> f65b8b69e766e8a52e6ebdb067ff8ac06cd12f8e
 }
 
 /**
@@ -188,7 +215,7 @@ function roundToPowerOfTen(num, pow) {
  * See: https://en.wikipedia.org/wiki/Primality_test
  *
  * @param {number} n
- * @return {bool}
+ * @return {boolean}
  *
  * @example:
  *   4 => false
@@ -399,7 +426,7 @@ function toPrecision(number, precision) {
 /**
  * Returns the primitive value of a Number object.
  *
- * @param {Number} number
+ * @param {number} number
  * @return {number}
  *
  * @example:
@@ -470,7 +497,7 @@ function getFloatOnString(str) {
  * '4.567abcdefgh', 10  => 4
  * 'abcdefgh', 10       => NaN
  * '1.234', 2           => 1
- * '10', 8              => 1
+ * '10', 8              => 8
  */
 function getIntegerOnString(str, base) {
   return Number.parseInt(str, base);
